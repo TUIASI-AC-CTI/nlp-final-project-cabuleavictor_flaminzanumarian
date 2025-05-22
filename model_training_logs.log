@@ -1,0 +1,792 @@
+2025-05-20 12:39:41,828 - INFO - Loading and preparing datasets...
+2025-05-20 12:39:42,499 - INFO - 
+Dataset sizes:
+2025-05-20 12:39:42,500 - INFO - Train: 161395
+2025-05-20 12:39:42,500 - INFO - Validation: 28482
+2025-05-20 12:39:42,500 - INFO - Test: 33508
+2025-05-20 12:39:42,500 - INFO - Initializing model: GroNLP/hateBERT
+2025-05-20 12:39:42,875 - INFO - Tokenizer max length: 512
+2025-05-20 12:39:44,833 - INFO - Using device: cuda:2
+2025-05-20 12:40:17,098 - INFO - Trainable parameters: 101805314/109483778 (93.0%)
+2025-05-20 12:40:17,098 - INFO - 
+Starting training...
+2025-05-20 12:40:17,098 - INFO - Initial trainable layers:
+2025-05-20 12:40:17,098 - INFO - - bert.embeddings.word_embeddings.weight
+2025-05-20 12:40:17,099 - INFO - - bert.embeddings.position_embeddings.weight
+2025-05-20 12:40:17,099 - INFO - - bert.embeddings.token_type_embeddings.weight
+2025-05-20 12:40:17,099 - INFO - - bert.embeddings.LayerNorm.weight
+2025-05-20 12:40:17,099 - INFO - - bert.embeddings.LayerNorm.bias
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.query.weight
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.query.bias
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.key.weight
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.key.bias
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.value.weight
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.self.value.bias
+2025-05-20 12:40:17,099 - INFO - - bert.encoder.layer.0.attention.output.dense.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.attention.output.dense.bias
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.intermediate.dense.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.intermediate.dense.bias
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.output.dense.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.output.dense.bias
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.output.LayerNorm.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.0.output.LayerNorm.bias
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.1.attention.self.query.weight
+2025-05-20 12:40:17,100 - INFO - - bert.encoder.layer.1.attention.self.query.bias
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.self.key.weight
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.self.key.bias
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.self.value.weight
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.self.value.bias
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.output.dense.weight
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.output.dense.bias
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.intermediate.dense.weight
+2025-05-20 12:40:17,101 - INFO - - bert.encoder.layer.1.intermediate.dense.bias
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.1.output.dense.weight
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.1.output.dense.bias
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.1.output.LayerNorm.weight
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.1.output.LayerNorm.bias
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.query.weight
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.query.bias
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.key.weight
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.key.bias
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.value.weight
+2025-05-20 12:40:17,102 - INFO - - bert.encoder.layer.2.attention.self.value.bias
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.attention.output.dense.weight
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.attention.output.dense.bias
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.intermediate.dense.weight
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.intermediate.dense.bias
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.output.dense.weight
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.output.dense.bias
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.output.LayerNorm.weight
+2025-05-20 12:40:17,103 - INFO - - bert.encoder.layer.2.output.LayerNorm.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.query.weight
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.query.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.key.weight
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.key.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.value.weight
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.self.value.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.output.dense.weight
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.output.dense.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,104 - INFO - - bert.encoder.layer.3.intermediate.dense.weight
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.3.intermediate.dense.bias
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.3.output.dense.weight
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.3.output.dense.bias
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.3.output.LayerNorm.weight
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.3.output.LayerNorm.bias
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.4.attention.self.query.weight
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.4.attention.self.query.bias
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.4.attention.self.key.weight
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.4.attention.self.key.bias
+2025-05-20 12:40:17,105 - INFO - - bert.encoder.layer.4.attention.self.value.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.attention.self.value.bias
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.attention.output.dense.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.attention.output.dense.bias
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.intermediate.dense.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.intermediate.dense.bias
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.output.dense.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.output.dense.bias
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.output.LayerNorm.weight
+2025-05-20 12:40:17,106 - INFO - - bert.encoder.layer.4.output.LayerNorm.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.query.weight
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.query.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.key.weight
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.key.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.value.weight
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.self.value.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.output.dense.weight
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.output.dense.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,107 - INFO - - bert.encoder.layer.5.intermediate.dense.weight
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.5.intermediate.dense.bias
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.5.output.dense.weight
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.5.output.dense.bias
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.5.output.LayerNorm.weight
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.5.output.LayerNorm.bias
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.6.attention.self.query.weight
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.6.attention.self.query.bias
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.6.attention.self.key.weight
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.6.attention.self.key.bias
+2025-05-20 12:40:17,108 - INFO - - bert.encoder.layer.6.attention.self.value.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.attention.self.value.bias
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.attention.output.dense.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.attention.output.dense.bias
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.intermediate.dense.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.intermediate.dense.bias
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.output.dense.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.output.dense.bias
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.output.LayerNorm.weight
+2025-05-20 12:40:17,109 - INFO - - bert.encoder.layer.6.output.LayerNorm.bias
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.query.weight
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.query.bias
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.key.weight
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.key.bias
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.value.weight
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.self.value.bias
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.output.dense.weight
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.output.dense.bias
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,110 - INFO - - bert.encoder.layer.7.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.intermediate.dense.weight
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.intermediate.dense.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.output.dense.weight
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.output.dense.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.output.LayerNorm.weight
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.7.output.LayerNorm.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.8.attention.self.query.weight
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.8.attention.self.query.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.8.attention.self.key.weight
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.8.attention.self.key.bias
+2025-05-20 12:40:17,111 - INFO - - bert.encoder.layer.8.attention.self.value.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.attention.self.value.bias
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.attention.output.dense.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.attention.output.dense.bias
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.intermediate.dense.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.intermediate.dense.bias
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.output.dense.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.output.dense.bias
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.output.LayerNorm.weight
+2025-05-20 12:40:17,112 - INFO - - bert.encoder.layer.8.output.LayerNorm.bias
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.query.weight
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.query.bias
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.key.weight
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.key.bias
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.value.weight
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.self.value.bias
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.output.dense.weight
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.output.dense.bias
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,113 - INFO - - bert.encoder.layer.9.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.intermediate.dense.weight
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.intermediate.dense.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.output.dense.weight
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.output.dense.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.output.LayerNorm.weight
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.9.output.LayerNorm.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.10.attention.self.query.weight
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.10.attention.self.query.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.10.attention.self.key.weight
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.10.attention.self.key.bias
+2025-05-20 12:40:17,114 - INFO - - bert.encoder.layer.10.attention.self.value.weight
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.attention.self.value.bias
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.attention.output.dense.weight
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.attention.output.dense.bias
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.attention.output.LayerNorm.weight
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.attention.output.LayerNorm.bias
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.intermediate.dense.weight
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.intermediate.dense.bias
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.output.dense.weight
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.output.dense.bias
+2025-05-20 12:40:17,115 - INFO - - bert.encoder.layer.10.output.LayerNorm.weight
+2025-05-20 12:40:17,116 - INFO - - bert.encoder.layer.10.output.LayerNorm.bias
+2025-05-20 12:40:17,116 - INFO - - classifier.weight
+2025-05-20 12:40:17,116 - INFO - - classifier.bias
+2025-05-20 12:40:17,116 - INFO - 
+============================== Epoch 1/20 ==============================
+2025-05-20 12:46:34,525 - INFO - Train Loss: 0.0410
+2025-05-20 12:47:21,910 - INFO - 
+Val Classification Report:
+2025-05-20 12:47:21,937 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.76      0.68      0.72     16011
+        Hate       0.64      0.73      0.68     12471
+
+    accuracy                           0.70     28482
+   macro avg       0.70      0.70      0.70     28482
+weighted avg       0.71      0.70      0.70     28482
+
+2025-05-20 12:47:22,276 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 12:47:22,278 - INFO - Val Metrics - F1: 0.6985, PR AUC: 0.7237, ROC AUC: 0.7775
+2025-05-20 12:47:23,941 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_1.pt
+2025-05-20 12:47:23,941 - INFO - New best model saved!
+2025-05-20 12:47:24,195 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 12:47:24,196 - INFO - 
+============================== Epoch 2/20 ==============================
+2025-05-20 12:47:24,196 - INFO - Unfrozen layers: [10, 11] (plus embeddings)
+2025-05-20 12:47:24,197 - INFO - Trainable parameters: 38014466/109483778 (34.7%)
+2025-05-20 12:47:24,198 - INFO - Optimizer reinitialized with new trainable parameters
+2025-05-20 12:52:32,628 - INFO - Train Loss: 0.0358
+2025-05-20 12:53:19,074 - INFO - 
+Val Classification Report:
+2025-05-20 12:53:19,101 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.79      0.64      0.71     16011
+        Hate       0.63      0.78      0.70     12471
+
+    accuracy                           0.70     28482
+   macro avg       0.71      0.71      0.70     28482
+weighted avg       0.72      0.70      0.70     28482
+
+2025-05-20 12:53:19,243 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 12:53:19,244 - INFO - Val Metrics - F1: 0.7025, PR AUC: 0.7393, ROC AUC: 0.7908
+2025-05-20 12:53:20,394 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_2.pt
+2025-05-20 12:53:20,394 - INFO - New best model saved!
+2025-05-20 12:53:20,671 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 12:53:20,671 - INFO - 
+============================== Epoch 3/20 ==============================
+2025-05-20 12:58:28,100 - INFO - Train Loss: 0.0347
+2025-05-20 12:59:14,663 - INFO - 
+Val Classification Report:
+2025-05-20 12:59:14,690 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.80      0.65      0.72     16011
+        Hate       0.64      0.79      0.71     12471
+
+    accuracy                           0.71     28482
+   macro avg       0.72      0.72      0.71     28482
+weighted avg       0.73      0.71      0.71     28482
+
+2025-05-20 12:59:14,832 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 12:59:14,834 - INFO - Val Metrics - F1: 0.7130, PR AUC: 0.7528, ROC AUC: 0.8018
+2025-05-20 12:59:15,887 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_3.pt
+2025-05-20 12:59:15,887 - INFO - New best model saved!
+2025-05-20 12:59:16,184 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 12:59:16,184 - INFO - 
+============================== Epoch 4/20 ==============================
+2025-05-20 12:59:16,185 - INFO - Unfrozen layers: [8, 9, 10, 11] (plus embeddings)
+2025-05-20 12:59:16,186 - INFO - Trainable parameters: 52190210/109483778 (47.7%)
+2025-05-20 12:59:16,187 - INFO - Optimizer reinitialized with new trainable parameters
+2025-05-20 13:04:37,942 - INFO - Train Loss: 0.0335
+2025-05-20 13:05:24,567 - INFO - 
+Val Classification Report:
+2025-05-20 13:05:24,594 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.80      0.69      0.74     16011
+        Hate       0.66      0.78      0.71     12471
+
+    accuracy                           0.73     28482
+   macro avg       0.73      0.73      0.73     28482
+weighted avg       0.74      0.73      0.73     28482
+
+2025-05-20 13:05:24,734 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:05:24,736 - INFO - Val Metrics - F1: 0.7254, PR AUC: 0.7682, ROC AUC: 0.8145
+2025-05-20 13:05:25,979 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_4.pt
+2025-05-20 13:05:25,979 - INFO - New best model saved!
+2025-05-20 13:05:26,257 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:05:26,257 - INFO - 
+============================== Epoch 5/20 ==============================
+2025-05-20 13:10:51,744 - INFO - Train Loss: 0.0320
+2025-05-20 13:11:38,324 - INFO - 
+Val Classification Report:
+2025-05-20 13:11:38,351 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.80      0.71      0.75     16011
+        Hate       0.67      0.77      0.72     12471
+
+    accuracy                           0.74     28482
+   macro avg       0.74      0.74      0.74     28482
+weighted avg       0.74      0.74      0.74     28482
+
+2025-05-20 13:11:38,507 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:11:38,509 - INFO - Val Metrics - F1: 0.7350, PR AUC: 0.7804, ROC AUC: 0.8245
+2025-05-20 13:11:39,754 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_5.pt
+2025-05-20 13:11:39,754 - INFO - New best model saved!
+2025-05-20 13:11:40,040 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:11:40,040 - INFO - 
+============================== Epoch 6/20 ==============================
+2025-05-20 13:11:40,041 - INFO - Unfrozen layers: [6, 7, 8, 9, 10, 11] (plus embeddings)
+2025-05-20 13:11:40,042 - INFO - Trainable parameters: 66365954/109483778 (60.6%)
+2025-05-20 13:11:40,043 - INFO - Optimizer reinitialized with new trainable parameters
+2025-05-20 13:17:15,045 - INFO - Train Loss: 0.0309
+2025-05-20 13:18:02,018 - INFO - 
+Val Classification Report:
+2025-05-20 13:18:02,045 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.80      0.73      0.76     16011
+        Hate       0.69      0.76      0.72     12471
+
+    accuracy                           0.74     28482
+   macro avg       0.74      0.75      0.74     28482
+weighted avg       0.75      0.74      0.75     28482
+
+2025-05-20 13:18:02,190 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:18:02,191 - INFO - Val Metrics - F1: 0.7433, PR AUC: 0.7904, ROC AUC: 0.8320
+2025-05-20 13:18:03,566 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_6.pt
+2025-05-20 13:18:03,566 - INFO - New best model saved!
+2025-05-20 13:18:03,820 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:18:03,820 - INFO - 
+============================== Epoch 7/20 ==============================
+2025-05-20 13:23:41,526 - INFO - Train Loss: 0.0295
+2025-05-20 13:24:28,940 - INFO - 
+Val Classification Report:
+2025-05-20 13:24:28,967 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.81      0.73      0.77     16011
+        Hate       0.69      0.78      0.73     12471
+
+    accuracy                           0.75     28482
+   macro avg       0.75      0.76      0.75     28482
+weighted avg       0.76      0.75      0.75     28482
+
+2025-05-20 13:24:29,113 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:24:29,114 - INFO - Val Metrics - F1: 0.7512, PR AUC: 0.8011, ROC AUC: 0.8409
+2025-05-20 13:24:30,516 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_7.pt
+2025-05-20 13:24:30,517 - INFO - New best model saved!
+2025-05-20 13:24:30,976 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:24:30,976 - INFO - 
+============================== Epoch 8/20 ==============================
+2025-05-20 13:24:30,977 - INFO - Unfrozen layers: [4, 5, 6, 7, 8, 9, 10, 11] (plus embeddings)
+2025-05-20 13:24:30,979 - INFO - Trainable parameters: 80541698/109483778 (73.6%)
+2025-05-20 13:24:30,980 - INFO - Optimizer reinitialized with new trainable parameters
+2025-05-20 13:30:21,047 - INFO - Train Loss: 0.0281
+2025-05-20 13:31:08,504 - INFO - 
+Val Classification Report:
+2025-05-20 13:31:08,531 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.81      0.73      0.77     16011
+        Hate       0.70      0.79      0.74     12471
+
+    accuracy                           0.76     28482
+   macro avg       0.76      0.76      0.76     28482
+weighted avg       0.76      0.76      0.76     28482
+
+2025-05-20 13:31:08,665 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:31:08,666 - INFO - Val Metrics - F1: 0.7553, PR AUC: 0.8072, ROC AUC: 0.8468
+2025-05-20 13:31:10,133 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_8.pt
+2025-05-20 13:31:10,133 - INFO - New best model saved!
+2025-05-20 13:31:10,424 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:31:10,424 - INFO - 
+============================== Epoch 9/20 ==============================
+2025-05-20 13:37:00,072 - INFO - Train Loss: 0.0265
+2025-05-20 13:37:48,189 - INFO - 
+Val Classification Report:
+2025-05-20 13:37:48,216 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.80      0.77      0.79     16011
+        Hate       0.72      0.76      0.74     12471
+
+    accuracy                           0.77     28482
+   macro avg       0.76      0.76      0.76     28482
+weighted avg       0.77      0.77      0.77     28482
+
+2025-05-20 13:37:48,349 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:37:48,350 - INFO - Val Metrics - F1: 0.7632, PR AUC: 0.8156, ROC AUC: 0.8537
+2025-05-20 13:37:49,884 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_9.pt
+2025-05-20 13:37:49,884 - INFO - New best model saved!
+2025-05-20 13:37:50,193 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:37:50,193 - INFO - 
+============================== Epoch 10/20 ==============================
+2025-05-20 13:37:50,194 - INFO - Unfrozen layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (plus embeddings)
+2025-05-20 13:37:50,196 - INFO - Trainable parameters: 108893186/109483778 (99.5%)
+2025-05-20 13:37:50,197 - INFO - Optimizer reinitialized with new trainable parameters
+2025-05-20 13:44:26,575 - INFO - Train Loss: 0.0248
+2025-05-20 13:45:13,908 - INFO - 
+Val Classification Report:
+2025-05-20 13:45:13,934 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.83      0.75      0.79     16011
+        Hate       0.71      0.80      0.75     12471
+
+    accuracy                           0.77     28482
+   macro avg       0.77      0.77      0.77     28482
+weighted avg       0.78      0.77      0.77     28482
+
+2025-05-20 13:45:14,061 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:45:14,062 - INFO - Val Metrics - F1: 0.7697, PR AUC: 0.8247, ROC AUC: 0.8613
+2025-05-20 13:45:15,839 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_10.pt
+2025-05-20 13:45:15,840 - INFO - New best model saved!
+2025-05-20 13:45:16,114 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:45:16,114 - INFO - 
+============================== Epoch 11/20 ==============================
+2025-05-20 13:51:50,906 - INFO - Train Loss: 0.0230
+2025-05-20 13:52:38,629 - INFO - 
+Val Classification Report:
+2025-05-20 13:52:38,656 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.83      0.75      0.79     16011
+        Hate       0.72      0.80      0.76     12471
+
+    accuracy                           0.77     28482
+   macro avg       0.77      0.78      0.77     28482
+weighted avg       0.78      0.77      0.77     28482
+
+2025-05-20 13:52:38,787 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 13:52:38,788 - INFO - Val Metrics - F1: 0.7723, PR AUC: 0.8290, ROC AUC: 0.8652
+2025-05-20 13:52:40,530 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_11.pt
+2025-05-20 13:52:40,530 - INFO - New best model saved!
+2025-05-20 13:52:40,802 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 13:52:40,802 - INFO - 
+============================== Epoch 12/20 ==============================
+2025-05-20 13:59:15,211 - INFO - Train Loss: 0.0212
+2025-05-20 14:00:02,667 - INFO - 
+Val Classification Report:
+2025-05-20 14:00:02,694 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.82      0.78      0.80     16011
+        Hate       0.73      0.78      0.76     12471
+
+    accuracy                           0.78     28482
+   macro avg       0.78      0.78      0.78     28482
+weighted avg       0.78      0.78      0.78     28482
+
+2025-05-20 14:00:02,824 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:00:02,825 - INFO - Val Metrics - F1: 0.7772, PR AUC: 0.8360, ROC AUC: 0.8705
+2025-05-20 14:00:04,556 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_12.pt
+2025-05-20 14:00:04,556 - INFO - New best model saved!
+2025-05-20 14:00:04,839 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:00:04,839 - INFO - 
+============================== Epoch 13/20 ==============================
+2025-05-20 14:06:44,584 - INFO - Train Loss: 0.0199
+2025-05-20 14:07:32,456 - INFO - 
+Val Classification Report:
+2025-05-20 14:07:32,482 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.84      0.75      0.80     16011
+        Hate       0.72      0.82      0.77     12471
+
+    accuracy                           0.78     28482
+   macro avg       0.78      0.79      0.78     28482
+weighted avg       0.79      0.78      0.78     28482
+
+2025-05-20 14:07:32,614 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:07:32,615 - INFO - Val Metrics - F1: 0.7821, PR AUC: 0.8420, ROC AUC: 0.8764
+2025-05-20 14:07:34,426 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_13.pt
+2025-05-20 14:07:34,426 - INFO - New best model saved!
+2025-05-20 14:07:34,676 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:07:34,676 - INFO - 
+============================== Epoch 14/20 ==============================
+2025-05-20 14:14:17,461 - INFO - Train Loss: 0.0184
+2025-05-20 14:15:05,138 - INFO - 
+Val Classification Report:
+2025-05-20 14:15:05,164 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.83      0.77      0.80     16011
+        Hate       0.73      0.80      0.77     12471
+
+    accuracy                           0.79     28482
+   macro avg       0.78      0.79      0.78     28482
+weighted avg       0.79      0.79      0.79     28482
+
+2025-05-20 14:15:05,312 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:15:05,313 - INFO - Val Metrics - F1: 0.7848, PR AUC: 0.8445, ROC AUC: 0.8786
+2025-05-20 14:15:07,147 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_14.pt
+2025-05-20 14:15:07,147 - INFO - New best model saved!
+2025-05-20 14:15:07,438 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:15:07,438 - INFO - 
+============================== Epoch 15/20 ==============================
+2025-05-20 14:21:53,017 - INFO - Train Loss: 0.0172
+2025-05-20 14:22:40,686 - INFO - 
+Val Classification Report:
+2025-05-20 14:22:40,713 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.83      0.78      0.81     16011
+        Hate       0.74      0.80      0.77     12471
+
+    accuracy                           0.79     28482
+   macro avg       0.79      0.79      0.79     28482
+weighted avg       0.79      0.79      0.79     28482
+
+2025-05-20 14:22:40,844 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:22:40,845 - INFO - Val Metrics - F1: 0.7890, PR AUC: 0.8480, ROC AUC: 0.8812
+2025-05-20 14:22:42,616 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_15.pt
+2025-05-20 14:22:42,616 - INFO - New best model saved!
+2025-05-20 14:22:43,079 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:22:43,079 - INFO - 
+============================== Epoch 16/20 ==============================
+2025-05-20 14:29:18,810 - INFO - Train Loss: 0.0160
+2025-05-20 14:30:06,274 - INFO - 
+Val Classification Report:
+2025-05-20 14:30:06,301 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.85      0.78      0.81     16011
+        Hate       0.74      0.82      0.78     12471
+
+    accuracy                           0.80     28482
+   macro avg       0.80      0.80      0.80     28482
+weighted avg       0.80      0.80      0.80     28482
+
+2025-05-20 14:30:06,438 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:30:06,439 - INFO - Val Metrics - F1: 0.7957, PR AUC: 0.8599, ROC AUC: 0.8902
+2025-05-20 14:30:08,207 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_16.pt
+2025-05-20 14:30:08,208 - INFO - New best model saved!
+2025-05-20 14:30:08,490 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:30:08,490 - INFO - 
+============================== Epoch 17/20 ==============================
+2025-05-20 14:36:43,663 - INFO - Train Loss: 0.0149
+2025-05-20 14:37:30,916 - INFO - 
+Val Classification Report:
+2025-05-20 14:37:30,943 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.84      0.79      0.82     16011
+        Hate       0.75      0.81      0.78     12471
+
+    accuracy                           0.80     28482
+   macro avg       0.80      0.80      0.80     28482
+weighted avg       0.80      0.80      0.80     28482
+
+2025-05-20 14:37:31,072 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:37:31,074 - INFO - Val Metrics - F1: 0.7972, PR AUC: 0.8629, ROC AUC: 0.8919
+2025-05-20 14:37:32,860 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_17.pt
+2025-05-20 14:37:32,860 - INFO - New best model saved!
+2025-05-20 14:37:33,150 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:37:33,151 - INFO - 
+============================== Epoch 18/20 ==============================
+2025-05-20 14:44:08,269 - INFO - Train Loss: 0.0141
+2025-05-20 14:44:55,746 - INFO - 
+Val Classification Report:
+2025-05-20 14:44:55,773 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.85      0.78      0.81     16011
+        Hate       0.74      0.83      0.78     12471
+
+    accuracy                           0.80     28482
+   macro avg       0.80      0.80      0.80     28482
+weighted avg       0.81      0.80      0.80     28482
+
+2025-05-20 14:44:55,904 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:44:55,905 - INFO - Val Metrics - F1: 0.7989, PR AUC: 0.8626, ROC AUC: 0.8930
+2025-05-20 14:44:57,699 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_18.pt
+2025-05-20 14:44:57,700 - INFO - New best model saved!
+2025-05-20 14:44:57,968 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:44:57,968 - INFO - 
+============================== Epoch 19/20 ==============================
+2025-05-20 14:51:33,566 - INFO - Train Loss: 0.0133
+2025-05-20 14:52:20,868 - INFO - 
+Val Classification Report:
+2025-05-20 14:52:20,895 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.84      0.80      0.82     16011
+        Hate       0.76      0.80      0.78     12471
+
+    accuracy                           0.80     28482
+   macro avg       0.80      0.80      0.80     28482
+weighted avg       0.81      0.80      0.80     28482
+
+2025-05-20 14:52:21,026 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:52:21,027 - INFO - Val Metrics - F1: 0.8014, PR AUC: 0.8650, ROC AUC: 0.8939
+2025-05-20 14:52:22,838 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_19.pt
+2025-05-20 14:52:22,838 - INFO - New best model saved!
+2025-05-20 14:52:23,105 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:52:23,105 - INFO - 
+============================== Epoch 20/20 ==============================
+2025-05-20 14:58:58,267 - INFO - Train Loss: 0.0127
+2025-05-20 14:59:45,809 - INFO - 
+Val Classification Report:
+2025-05-20 14:59:45,836 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.85      0.80      0.82     16011
+        Hate       0.76      0.82      0.79     12471
+
+    accuracy                           0.81     28482
+   macro avg       0.80      0.81      0.81     28482
+weighted avg       0.81      0.81      0.81     28482
+
+2025-05-20 14:59:45,967 - INFO - Confusion matrix saved to model_output_20250520_124017\val_confusion_matrix.png
+2025-05-20 14:59:45,968 - INFO - Val Metrics - F1: 0.8059, PR AUC: 0.8685, ROC AUC: 0.8967
+2025-05-20 14:59:47,786 - INFO - Model checkpoint saved to model_output_20250520_124017\model_epoch_20.pt
+2025-05-20 14:59:47,787 - INFO - New best model saved!
+2025-05-20 14:59:48,062 - INFO - Training metrics plot saved to model_output_20250520_124017\training_metrics.png
+2025-05-20 14:59:48,062 - INFO - 
+Running final evaluation on test set...
+2025-05-20 15:00:37,732 - INFO - 
+Test Classification Report:
+2025-05-20 15:00:37,762 - INFO -               precision    recall  f1-score   support
+
+    Not Hate       0.85      0.80      0.82     18837
+        Hate       0.76      0.82      0.79     14671
+
+    accuracy                           0.81     33508
+   macro avg       0.81      0.81      0.81     33508
+weighted avg       0.81      0.81      0.81     33508
+
+2025-05-20 15:00:37,911 - INFO - Confusion matrix saved to model_output_20250520_124017\test_confusion_matrix.png
+2025-05-20 15:00:37,914 - INFO - Test Metrics - F1: 0.8062, PR AUC: 0.8711, ROC AUC: 0.8967
+2025-05-20 15:00:37,914 - INFO - 
+Optimal Threshold: {'accuracy': 0.8078667780828459, 'f1': 0.8062424553616081, 'roc_auc': np.float64(0.8966867793375575), 'pr_auc': np.float64(0.8711450887277296), 'optimal_threshold': np.float16(0.3938), 'optimal_f1': np.float64(0.7947576759063567)}
+2025-05-20 15:00:37,914 - INFO - 
+Testing on sample texts:
+2025-05-20 15:00:37,986 - INFO - 
+Text: People like you represent everything that's wrong with this nation — always complaining, never contributing, and constantly draining resources. Honestly, you'd do us all a favor by leaving and never coming back.
+2025-05-20 15:00:37,986 - INFO - Prediction: Hate
+2025-05-20 15:00:37,986 - INFO - Confidence: 0.93
+2025-05-20 15:00:37,986 - INFO - Hate probability: 0.9341
+2025-05-20 15:00:38,001 - INFO - 
+Text: I genuinely despise everything you stand for — your presence, your opinions, your entire way of life disgusts me to my core.
+2025-05-20 15:00:38,001 - INFO - Prediction: Hate
+2025-05-20 15:00:38,001 - INFO - Confidence: 0.92
+2025-05-20 15:00:38,001 - INFO - Hate probability: 0.9214
+2025-05-20 15:00:38,015 - INFO - 
+Text: The way you act is absolutely revolting, and it's a shame society tolerates people like you without consequence.
+2025-05-20 15:00:38,015 - INFO - Prediction: Hate
+2025-05-20 15:00:38,015 - INFO - Confidence: 0.97
+2025-05-20 15:00:38,015 - INFO - Hate probability: 0.9717
+2025-05-20 15:00:38,044 - INFO - 
+Text: People like you are a plague — infecting every space with your entitlement and toxic ideas. This world would be better off without your kind.
+2025-05-20 15:00:38,044 - INFO - Prediction: Hate
+2025-05-20 15:00:38,045 - INFO - Confidence: 0.88
+2025-05-20 15:00:38,045 - INFO - Hate probability: 0.8848
+2025-05-20 15:00:38,060 - INFO - 
+Text: You serve no purpose in society. You're a parasite, and the world would be cleaner if you just disappeared.
+2025-05-20 15:00:38,060 - INFO - Prediction: Hate
+2025-05-20 15:00:38,060 - INFO - Confidence: 0.96
+2025-05-20 15:00:38,060 - INFO - Hate probability: 0.9648
+2025-05-20 15:00:38,074 - INFO - 
+Text: Why don’t you crawl back to the filthy, backwards place you came from? You have no business being part of a civilized society.
+2025-05-20 15:00:38,074 - INFO - Prediction: Hate
+2025-05-20 15:00:38,074 - INFO - Confidence: 0.90
+2025-05-20 15:00:38,074 - INFO - Hate probability: 0.9023
+2025-05-20 15:00:38,088 - INFO - 
+Text: They’ve become like a virus — spreading their twisted ideas and eroding the very fabric of our values. We must stop them before it's too late.
+2025-05-20 15:00:38,088 - INFO - Prediction: Hate
+2025-05-20 15:00:38,088 - INFO - Confidence: 0.54
+2025-05-20 15:00:38,088 - INFO - Hate probability: 0.5439
+2025-05-20 15:00:38,102 - INFO - 
+Text: It's hard to see them as human when all they do is create chaos, drain resources, and disrespect every rule we live by.
+2025-05-20 15:00:38,102 - INFO - Prediction: Hate
+2025-05-20 15:00:38,103 - INFO - Confidence: 0.74
+2025-05-20 15:00:38,103 - INFO - Hate probability: 0.7378
+2025-05-20 15:00:38,116 - INFO - 
+Text: Frankly, I don’t see the problem with burning down everything they’ve touched — they’ve done nothing but poison it anyway.
+2025-05-20 15:00:38,116 - INFO - Prediction: Hate
+2025-05-20 15:00:38,116 - INFO - Confidence: 0.72
+2025-05-20 15:00:38,116 - INFO - Hate probability: 0.7173
+2025-05-20 15:00:38,130 - INFO - 
+Text: Every time your kind shows up, things fall apart — you bring nothing but dysfunction, entitlement, and conflict.
+2025-05-20 15:00:38,130 - INFO - Prediction: Hate
+2025-05-20 15:00:38,130 - INFO - Confidence: 0.63
+2025-05-20 15:00:38,130 - INFO - Hate probability: 0.6255
+2025-05-20 15:00:38,144 - INFO - 
+Text: If we don't start taking serious action to remove these infiltrators, they'll keep undermining our culture and our future.
+2025-05-20 15:00:38,144 - INFO - Prediction: Hate
+2025-05-20 15:00:38,144 - INFO - Confidence: 0.73
+2025-05-20 15:00:38,144 - INFO - Hate probability: 0.7261
+2025-05-20 15:00:38,158 - INFO - 
+Text: Hello my friend, I hope you're having a beautiful day full of peace and kindness.
+2025-05-20 15:00:38,158 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,158 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,158 - INFO - Hate probability: 0.0037
+2025-05-20 15:00:38,172 - INFO - 
+Text: What a lovely, refreshing day — it's the kind that makes you feel grateful to be alive.
+2025-05-20 15:00:38,172 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,172 - INFO - Confidence: 0.98
+2025-05-20 15:00:38,172 - INFO - Hate probability: 0.0199
+2025-05-20 15:00:38,186 - INFO - 
+Text: The weather is exceptionally pleasant today, don't you think? Perfect for a walk or relaxing outside.
+2025-05-20 15:00:38,186 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,186 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,186 - INFO - Hate probability: 0.0125
+2025-05-20 15:00:38,199 - INFO - 
+Text: You did an outstanding job on the project — your attention to detail and creativity really stood out.
+2025-05-20 15:00:38,200 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,200 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,200 - INFO - Hate probability: 0.0047
+2025-05-20 15:00:38,214 - INFO - 
+Text: Wishing you a truly restful and joyful weekend — take care and treat yourself kindly.
+2025-05-20 15:00:38,214 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,214 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,214 - INFO - Hate probability: 0.0080
+2025-05-20 15:00:38,228 - INFO - 
+Text: Let’s make an effort to support and uplift each other, especially when times get tough.
+2025-05-20 15:00:38,228 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,228 - INFO - Confidence: 0.97
+2025-05-20 15:00:38,228 - INFO - Hate probability: 0.0285
+2025-05-20 15:00:38,242 - INFO - 
+Text: Sending peace and love to everyone, regardless of background — we all deserve kindness.
+2025-05-20 15:00:38,242 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,242 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,242 - INFO - Hate probability: 0.0034
+2025-05-20 15:00:38,255 - INFO - 
+Text: Every person deserves respect and dignity, no matter who they are or where they're from.
+2025-05-20 15:00:38,256 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,256 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,256 - INFO - Hate probability: 0.0086
+2025-05-20 15:00:38,269 - INFO - 
+Text: I really admire your work — the effort and heart you put in truly makes a difference.
+2025-05-20 15:00:38,269 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,269 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,269 - INFO - Hate probability: 0.0094
+2025-05-20 15:00:38,283 - INFO - 
+Text: You're a wonderful presence in the world, and your kindness has a ripple effect on others.
+2025-05-20 15:00:38,283 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,283 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,283 - INFO - Hate probability: 0.0040
+2025-05-20 15:00:38,296 - INFO - 
+Text: You really have no idea what you’re doing, and it’s honestly embarrassing to watch.
+2025-05-20 15:00:38,297 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,297 - INFO - Confidence: 0.76
+2025-05-20 15:00:38,297 - INFO - Hate probability: 0.2401
+2025-05-20 15:00:38,310 - INFO - 
+Text: Can you please just stop talking? It’s exhausting listening to someone so clueless ramble on.
+2025-05-20 15:00:38,311 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,311 - INFO - Confidence: 0.52
+2025-05-20 15:00:38,311 - INFO - Hate probability: 0.4771
+2025-05-20 15:00:38,324 - INFO - 
+Text: This entire thing is absurd — a total waste of time and effort on something so obviously flawed.
+2025-05-20 15:00:38,324 - INFO - Prediction: Hate
+2025-05-20 15:00:38,324 - INFO - Confidence: 0.50
+2025-05-20 15:00:38,324 - INFO - Hate probability: 0.5015
+2025-05-20 15:00:38,338 - INFO - 
+Text: You’ve demonstrated, time and again, that you lack even the most basic understanding of the subject.
+2025-05-20 15:00:38,338 - INFO - Prediction: Hate
+2025-05-20 15:00:38,338 - INFO - Confidence: 0.51
+2025-05-20 15:00:38,338 - INFO - Hate probability: 0.5073
+2025-05-20 15:00:38,352 - INFO - 
+Text: I swear, that was the most ridiculous thing I've heard today — and I’ve heard a lot of nonsense.
+2025-05-20 15:00:38,352 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,352 - INFO - Confidence: 0.58
+2025-05-20 15:00:38,352 - INFO - Hate probability: 0.4165
+2025-05-20 15:00:38,366 - INFO - 
+Text: This group has systematically chipped away at our traditions, and it's hard to ignore the cultural consequences.
+2025-05-20 15:00:38,366 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,366 - INFO - Confidence: 0.92
+2025-05-20 15:00:38,366 - INFO - Hate probability: 0.0826
+2025-05-20 15:00:38,380 - INFO - 
+Text: Ever since immigration increased, our job market has become unstable and wages have been suppressed — it's not just a coincidence.
+2025-05-20 15:00:38,380 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,380 - INFO - Confidence: 0.75
+2025-05-20 15:00:38,380 - INFO - Hate probability: 0.2460
+2025-05-20 15:00:38,393 - INFO - 
+Text: We should absolutely reconsider who we allow into this country — not everyone shares our values or intentions.
+2025-05-20 15:00:38,393 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,393 - INFO - Confidence: 0.92
+2025-05-20 15:00:38,393 - INFO - Hate probability: 0.0795
+2025-05-20 15:00:38,407 - INFO - 
+Text: They might not openly oppose our culture, but their actions and priorities clearly don’t align with what we hold dear.
+2025-05-20 15:00:38,407 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,407 - INFO - Confidence: 0.65
+2025-05-20 15:00:38,407 - INFO - Hate probability: 0.3477
+2025-05-20 15:00:38,420 - INFO - 
+Text: Our country is losing its identity bit by bit, and we’re all pretending it’s just progress.
+2025-05-20 15:00:38,420 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,420 - INFO - Confidence: 0.78
+2025-05-20 15:00:38,421 - INFO - Hate probability: 0.2216
+2025-05-20 15:00:38,434 - INFO - 
+Text: I respectfully disagree with your opinion, but I completely support your right to express it freely.
+2025-05-20 15:00:38,434 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,434 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,434 - INFO - Hate probability: 0.0064
+2025-05-20 15:00:38,449 - INFO - 
+Text: That's not exactly how I see things, but I appreciate the way you've laid out your argument.
+2025-05-20 15:00:38,449 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,449 - INFO - Confidence: 0.93
+2025-05-20 15:00:38,449 - INFO - Hate probability: 0.0735
+2025-05-20 15:00:38,462 - INFO - 
+Text: I believe you're mistaken, but it's an interesting point that deserves thoughtful discussion.
+2025-05-20 15:00:38,463 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,463 - INFO - Confidence: 0.94
+2025-05-20 15:00:38,463 - INFO - Hate probability: 0.0612
+2025-05-20 15:00:38,476 - INFO - 
+Text: I'm not sure your statement is fully accurate — maybe we can go through the facts together.
+2025-05-20 15:00:38,476 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,476 - INFO - Confidence: 0.60
+2025-05-20 15:00:38,476 - INFO - Hate probability: 0.3997
+2025-05-20 15:00:38,490 - INFO - 
+Text: Thank you for sharing your view; it gave me something to think about even if I don’t fully agree.
+2025-05-20 15:00:38,490 - INFO - Prediction: Not Hate
+2025-05-20 15:00:38,490 - INFO - Confidence: 0.99
+2025-05-20 15:00:38,490 - INFO - Hate probability: 0.0062
+2025-05-20 15:00:38,490 - INFO - 
+Training complete.
